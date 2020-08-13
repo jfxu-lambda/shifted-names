@@ -880,6 +880,9 @@ Inductive renaming {trm : Set} :=
 | r_rename (b : name) (r : renaming) (a : name)
 | r_subst (t : trm) (r : renaming) (a : name).
 
+
+Module Notations.
+
 Notation "r1 ; r2" := (r_comp r1 r2)
   (at level 57, right associativity) : ren_scope.
 Notation "r , ^ a" := (r_shift a r)
@@ -894,15 +897,12 @@ Notation "a <- b" := (r_rename a r_id b)
   (at level 47, left associativity) : ren_scope.
 Notation "u // a" := (r_subst u r_id a)
   (at level 47, left associativity) : ren_scope.
-
-Module RenameNotation.
-
 Notation "r , a" := (r_rename a r a)
   (at level 47, left associativity) : ren_scope.
 
-End RenameNotation.
+End Notations.
 
-Import RenameNotation.
+Import Notations.
 
 Delimit Scope ren_scope with ren.
 

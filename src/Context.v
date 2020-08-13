@@ -1,6 +1,6 @@
 Require Import String Morph Var.
 
-Import Var.RenameNotation.
+Import Var.Notations.
 
 Inductive context {A : Set} : Set :=
 | ctx_empty

@@ -1,7 +1,7 @@
 Require Import String Morph Var Context.
 Require Setoid Morphisms.
 
-Import Var.RenameNotation.
+Import Var.Notations.
 
 Module Type Term.
 

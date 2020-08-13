@@ -1,6 +1,8 @@
 Require Import String Morph Var Context.
 Require Setoid Morphisms.
 
+Import Var.RenameNotation.
+
 Module Type Term.
 
   Parameter term : forall {V : nat}, Set.

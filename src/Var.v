@@ -894,8 +894,15 @@ Notation "a <- b" := (r_rename a r_id b)
   (at level 47, left associativity) : ren_scope.
 Notation "u // a" := (r_subst u r_id a)
   (at level 47, left associativity) : ren_scope.
+
+Module RenameNotation.
+
 Notation "r , a" := (r_rename a r a)
   (at level 47, left associativity) : ren_scope.
+
+End RenameNotation.
+
+Import RenameNotation.
 
 Delimit Scope ren_scope with ren.
 

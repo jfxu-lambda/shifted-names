@@ -1,5 +1,7 @@
 Require Import String Morph Var.
 
+Import Var.RenameNotation.
+
 Inductive context {A : Set} : Set :=
 | ctx_empty
 | ctx_cons (Γ : @context A) (a : name) (val : A).
